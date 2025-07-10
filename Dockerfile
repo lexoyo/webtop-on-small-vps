@@ -1,3 +1,4 @@
-FROM lscr.io/linuxserver/webtop:ubuntu-xfce
+FROM ghcr.io/linuxserver/webtop:ubuntu-xfce
 
-COPY kasmvnc.yaml /etc/selkies/kasmvnc.yaml
+COPY set-resolution.sh /etc/cont-init.d/10-set-resolution
+RUN chmod +x /etc/cont-init.d/10-set-resolution
